@@ -27,7 +27,7 @@ def init_driver():
     return webdriver.Chrome(service=service, options=options)
 
 def check_footer_elements(driver, url):
-    print(f"\n🔍 Проверка страницы: {url}")
+    print(f"\n Проверка страницы: {url}")
     try:
         driver.get(url)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "footer")))
